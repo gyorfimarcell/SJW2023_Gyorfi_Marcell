@@ -29,6 +29,11 @@ li {
     text-indent: 15px;
 }
 
+.keret {
+    border: 2px #414a04 double;
+    background-color: #ffeccb;
+}
+
 .pizzatipus {
     color: #414a04;
     font-weight: bold;
