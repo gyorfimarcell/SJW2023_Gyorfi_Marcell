@@ -7,7 +7,51 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Pizzarendelés</h1>
+        <form>
+            <label for="tipus" class="form-label">Pizza típusa:</label><br>
+            <select name="tipus" id="tipus" class="form-select">
+                <option value="0">Válasszon egyet!</option>
+                <option value="3200">Nápolyi pizza</option>
+                <option value="3000">Bolognai pizza</option>
+                <option value="2800">Songoku pizza</option>
+                <option value="2900">Hawaii pizza</option>
+            </select>
+            <br>
+
+            <label for="darab" class="form-label">Darabszám:</label><br>
+            <input type="number" name="darab" id="darab" min="0" class="form-control">
+            <br>
+
+            <p>Extrák:</p>
+            <input type="checkbox" value="sajt-200" name="sajt" id="sajt">
+            <label for="sajt" class="form-label">Sajt</label>
+            <br>
+            <input type="checkbox" value="sonka-250" name="sonka" id="sonka">
+            <label for="sonka" class="form-label">Sonka</label>
+            <br>
+            <input type="checkbox" value="kukorica-150" name="kukorica" id="kukorica">
+            <label for="kukorica" class="form-label">Kukorica</label>
+            <br>
+            <input type="checkbox" value="gomba-200" name="gomba" id="gomba">
+            <label for="gomba" class="form-label">Gomba</label>
+            <br>
+            <input type="checkbox" value="chili paprika-230" name="chili" id="chili">
+            <label for="chili" class="form-label">Chili paprika</label>
+            
+            <br>
+            <input type="button" value="Megrendelem" class="btn btn-success" onclick="rendel()">
+        </form>
+
+        <div class="alert alert-success" id="alert">
+            <h2>A rendelésed sikeres!</h2>
+            <p>A rendelésed sorszáma: <span id="sorszam"></span></p>
+            <hr>
+            <p>A rendelésed végösszege: <span id="osszeg"></span> Ft</p>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/rendeles.js"></script>
 </body>
